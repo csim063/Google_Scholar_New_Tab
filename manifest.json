@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Google Scholar New Tab",
+    "version": "1.0",
+    "description": "Display a Google Scholar search result in a new tab",
+    "permissions": ["tabs", "storage", "https://scholar.google.com/"],
+    "browser_action": {
+      "default_icon": "images/scholar_image_edited.jpg",
+      "default_popup": "popup.html",
+      "default_title": "Google Scholar New Tab"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://scholar.google.com/*"],
+        "js": ["scholar.js"]
+      }
+    ]
+  }
+  
