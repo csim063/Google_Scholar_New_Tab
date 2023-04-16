@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
-    <div id="login-container">
-      <button id="login-button">Log in with Google</button>
-    </div>
-    <div id="settings-container">
-      <label for="results-number">Number of results to cycle through:</label>
-      <input type="number" id="results-number" min="1" max="100" value="25" />
-    </div>
-    <div id="status"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Google Scholar Abstracts</title>
+</head>
+<body>
+    <h1>Google Scholar Abstracts</h1>
+    <button id="login-button">Login with Google</button>
+    <hr>
+    <label for="search-terms">Search terms:</label>
+    <input type="text" id="search-terms">
+    <br>
+    <label for="results-number">Number of results to cycle through:</label>
+    <input type="number" id="results-number" min="1" max="100" value="25">
+    <br>
+    <p id="status"></p>
+    <hr>
+    <button id="open-tab-button">Open Tab</button>
     <script src="background.js"></script>
-  </body>
+</body>
 </html>
